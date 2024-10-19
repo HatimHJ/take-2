@@ -806,6 +806,13 @@
                     ]
                 }
             ]
+        },
+        {
+            "key": "849cb204-53b4-418d-9b57-98c857af1bde",
+            "title": "صورة متحركة",
+            "icon": "sicon-store",
+            "path": "main-slider",
+            "fields": []
         }
     ],
     "support_url": null,
