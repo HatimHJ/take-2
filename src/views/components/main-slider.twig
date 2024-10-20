@@ -1,53 +1,20 @@
-<section class="s-block s-block--enhanced-photos-slider s-block--full-bg ">
-  <div class="swiper mySwiper ">
-    <div class="swiper-wrapper">
-      {# slider #1 #}
-      <div class="swiper-slide">
-        <div class="relative w-full h-full">
-          <img src="{{ 'images/placeholder.png' | asset }}" alt="Hero Image" 
-          class="w-full h-full object-cover">
-          <div class="absolute inset-0 flex flex-col items-start justify-center p-6 text-white bg-black bg-opacity-50 ">
-              <h1 class="text-3xl font-bold mb-4">Your Heading Here</h1>
-              <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Click Me</button>
+<section class="s-block s-block--photos-slider {{ is_repeated ? 'repeated-block' : '' }}">
+    <salla-slider 
+      type="carousel" 
+      class="home-slider photos-slider"
+      centered 
+      auto-play 
+      pagination
+      id="photos-{{ position }}-slider"> 
+      <div slot="items">
+        {% for index, item in component.slaedr %}
+          <div class="swiper-slide">
+            <a href="{{item.url}}">
+              <img loading="eager" src="{{ item.image }}" class="w-full object-contain " 
+                alt="{{store.name}} image-slider-{{index}}"></img>
+            </a>
           </div>
-        </div>
+        {% endfor %}
       </div>
-        {# slider #2 #}
-        <div class="swiper-slide">Slide 2</div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </div>
-  </section>
-
-<style>
-
-
-    .swiper {
-      width: 100%;
-      height: 100%;
-    }
-
-    .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      background: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .swiper-slide img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  </style>
-<script>
-    var swiper = new Swiper(".mySwiper", {
-      pagination: {
-        el: ".swiper-pagination",
-        dynamicBullets: true,
-      },
-    });
-  </script>
+    </salla-slider>
+</section> 
