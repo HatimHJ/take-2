@@ -9,10 +9,13 @@
       <div slot="items">
         {% for index, item in component.slaedr %}
           <div class="swiper-slide">
-            <a href="{{item.url}}">
-              <img loading="eager" src="{{ item.image }}" class="w-full object-contain " 
+            <a class="relative block" href="{{item.url}}">
+              <img loading="eager" height="300" width="1200" 
+              src="{{ item.image }}" class="w-full object-contain " 
                 alt="{{store.name}} image-slider-{{index}}"></img>
+                <h2 class=" absolute bottom-24 right-24">aaaaaaaa</h2>
             </a>
+
           </div>
         {% endfor %}
       </div>
