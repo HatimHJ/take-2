@@ -1,9 +1,8 @@
 <section class="s-block s-block--photos-slider {{ is_repeated ? 'repeated-block' : '' }}">
     <salla-slider 
       type="carousel" 
-      class="home-slider photos-slider"
       centered 
-      auto-play 
+   
       pagination
       id="photos-{{ position }}-slider"> 
       <div slot="items">
@@ -13,7 +12,7 @@
               <img loading="eager" height="300" width="1200" 
               src="{{ item.image }}" class="w-full object-contain " 
                 alt="{{store.name}} image-slider-{{index}}"></img>
-                <h2 class=" absolute bottom-24 right-24">aaaaaaaa</h2>
+                <h2 class=" absolute bottom-24 right-24">{{ item.custom-slider-title }}</h2>
             </a>
 
           </div>
