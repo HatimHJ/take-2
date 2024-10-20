@@ -812,7 +812,50 @@
             "title": "صورة متحركة",
             "icon": "sicon-store",
             "path": "main-slider",
-            "fields": []
+            "fields": [
+                {
+                    "id": "slaedr",
+                    "type": "collection",
+                    "format": "collection",
+                    "label": "سلايدر",
+                    "description": null,
+                    "labelHTML": null,
+                    "item_label": null,
+                    "icon": "sicon-list-add",
+                    "fields": [
+                        {
+                            "id": "slaedr.custom-slider-title",
+                            "type": "string",
+                            "format": "text",
+                            "label": "العنوان",
+                            "description": null,
+                            "labelHTML": null,
+                            "placeholder": "Placeholder text ..",
+                            "icon": "sicon-format-text-alt",
+                            "value": null,
+                            "multilanguage": false,
+                            "required": false,
+                            "minLength": 6,
+                            "maxLength": 30
+                        },
+                        {
+                            "id": "slaedr.image",
+                            "type": "string",
+                            "format": "image",
+                            "label": "Image",
+                            "description": null,
+                            "labelHTML": null,
+                            "placeholder": "e.g. https://hostname.com/image.png",
+                            "icon": "sicon-image",
+                            "value": null,
+                            "required": false
+                        }
+                    ],
+                    "value": [],
+                    "minLength": 1,
+                    "maxLength": 5
+                }
+            ]
         }
     ],
     "support_url": null,
