@@ -1,18 +1,18 @@
-<section class="s-block s-block--photos-slider {{ is_repeated ? 'repeated-block' : '' }}">
+<section class="s-block s-block--photos-slider main-slider {{ is_repeated ? 'repeated-block' : '' }}">
     <salla-slider 
       type="carousel" 
       centered 
-   
       pagination
-      id="photos-{{ position }}-slider"> 
+      auto-play
+      id="photos-{{ position }}-slider" class="custom-slider"> 
       <div slot="items">
         {% for index, item in component.slaedr %}
           <div class="swiper-slide">
             <a class="relative block" href="{{item.url}}">
-              <img loading="eager" height="300" width="1200" 
+              <img loading="eager" height="400" width="1200" 
               src="{{ item.image }}" class="w-full object-contain " 
                 alt="{{store.name}} image-slider-{{index}}"></img>
-                <h2 class=" absolute bottom-24 right-24">{{ item.custom-slider-title }}</h2>
+                <h2 class=" absolute bottom-24 right-24">{{ item.title }}</h2>
             </a>
 
           </div>
@@ -20,3 +20,23 @@
       </div>
     </salla-slider>
 </section> 
+<style>
+.main-slider .s-slider-v-centered .s-slider-block__title-nav{
+    position: absolute;
+    right: 45%;
+    top: 80%;
+    width: 90%;
+    justify-content: start;
+}
+ .main-slider .swiper-pagination-bullets.swiper-pagination-horizontal{
+  display:none
+}
+</style>
+
+<script>
+{# const swiper = new Swiper('.custom-slider', {
+  
+
+
+}); #}
+</script>
