@@ -1,42 +1,34 @@
+<section class="s-block s-block--hero-slider mt-12 s-block--full-bg wide-placeholder"> 
+  <salla-slider id="main-slider-{{ position }}" 
+      show-controls="false" type="carousel" auto-play 
+      slider-config = "{
+              &quot;effect&quot;: &quot;fade,&quot;
+              
+            }"
+  >
+    <div slot="items">
+      <img src="https://picsum.photos/id/137/1200/300">
+      <img src="https://picsum.photos/id/257/1200/300">
+      <img src="https://picsum.photos/id/237/1200/300">
+      <img src="https://picsum.photos/id/227/1200/300">
+    </div>
+  </salla-slider>
 
+</section>
+{# 
+<salla-slider 
+slider-config="{ &quot;slidesPerView&quot;:
+ 1, &quot;lazy&quot;: true,&quot;
+  effect&quot;: &quot;fade&quot;,
+   &quot;speed&quot;: 800,
+    &quot;parallax&quot;: true,
+     &quot;navigation&quot;:
+      { &quot;nextEl&quot;: &quot;.s-slider-next&quot;,
+       &quot;prevEl&quot;: &quot;.s-slider-prev&quot;},
+        &quot;pagination&quot;: {&quot;el&quot;: &quot;.swiper-pagination&quot;, &quot;clickable&quot;: true}}"
 
-<section class="s-block s-block--photos-slider main-slider {{ is_repeated ? 'repeated-block' : '' }}">
-  
-    <salla-slider 
-      type="hero" 
-       vertical="false"
-      grid-thumbs	="true"
-      effect="fade"
-      pagination
-      auto-play
-      id="photos-{{ position }}-slider" 
-      class="custom-slider"> 
-      <div slot="items">
-        {% for index, item in component.slaedr %}
-          <div class="swiper-slide">
-            <a class="relative block" href="{{item.url}}">
-              <img loading="eager" height="400" width="1200" 
-              src="{{ item.image }}" class="w-full object-contain " 
-                alt="{{store.name}} image-slider-{{index}}"></img>
-                <h2 class=" absolute bottom-24 right-24">xxxxxx-{{ item.title }}</h2>
-            </a>
+        class="s-slider-wrapper
+         carousel-slider s-slider-has-notitle s-slider-v-centered s-slider-horizontal
+          hydrated" block-title="" block-subtitle="" display-all-url="" direction="rtl">
 
-          </div>
-        {% endfor %}
-      </div>
-    </salla-slider>
-</section> 
-
-<style>
-.main-slider .s-slider-v-centered .s-slider-block__title-nav{
-    position: absolute;
-    right: 45%;
-    top: 80%;
-    width: 90%;
-    justify-content: start;
-}
- .main-slider .swiper-pagination-bullets.swiper-pagination-horizontal{
-  display:none
-}
-</style>
-
+#}
