@@ -1,0 +1,30 @@
+<section class="s-block s-block--hero-slider mt-12 s-block--full-bg wide-placeholder"> 
+  <salla-slider id="main-slider-{{ position }}" 
+       type="hero" Pagination
+      slider-config = "{
+             &quot;effect&quot;:&quot;fade&quot;,&quot;speed&quot;:1000,
+              &quot;pagination&quot;: {&quot;el&quot;: &quot;.swiper-pagination&quot;, &quot;clickable&quot;: true}
+            }"
+  >
+    <div slot="items">
+      <img src="https://picsum.photos/id/137/1200/300">
+      <img src="https://picsum.photos/id/257/1200/300">
+      <img src="https://picsum.photos/id/237/1200/300">
+      <img src="https://picsum.photos/id/227/1200/300">
+    </div>
+  </salla-slider>
+
+</section>
+{# 
+<salla-slider 
+slider-config="{ &quot;slidesPerView&quot;1, &quot;lazy&quot;: true,&quot; effect&quot;: &quot;fade&quot;,&quot;speed&quot;: 800,&quot;parallax&quot;: true,
+     &quot;navigation&quot;:
+      { &quot;nextEl&quot;: &quot;.s-slider-next&quot;,
+       &quot;prevEl&quot;: &quot;.s-slider-prev&quot;},
+        &quot;pagination&quot;: {&quot;el&quot;: &quot;.swiper-pagination&quot;, &quot;clickable&quot;: true}}"
+
+        class="s-slider-wrapper
+         carousel-slider s-slider-has-notitle s-slider-v-centered s-slider-horizontal
+          hydrated" block-title="" block-subtitle="" display-all-url="" direction="rtl">
+
+#}
