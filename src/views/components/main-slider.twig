@@ -4,8 +4,7 @@
 <salla-slider id="thumbs" show-controls="true" type="thumbs" Grid-thumbs="false" 
 show-thumbs-controls="false"
  slider-config = "{
-             &quot;effect&quot;:&quot;fade&quot;,&quot;speed&quot;:1000
-              
+             &quot;effect&quot;:&quot;fade&quot;,&quot;speed&quot;:1000       
             }" >
   <div slot="items" class="items">
     <img src="https://picsum.photos/1200/400?random=1">
@@ -14,9 +13,6 @@ show-thumbs-controls="false"
     <img src="https://picsum.photos/1200/400?random=4">
     <img src="https://picsum.photos/1200/400?random=5">
     <img src="https://picsum.photos/1200/400?random=6">
-    <img src="https://picsum.photos/1200/400?random=7">
-    <img src="https://picsum.photos/1200/400?random=8">
-    <img src="https://picsum.photos/1200/400?random=9">
   </div>
   
   <div slot="thumbs">
@@ -26,42 +22,22 @@ show-thumbs-controls="false"
     <img src="https://picsum.photos/1200/400?random=4">
     <img src="https://picsum.photos/1200/400?random=5">
     <img src="https://picsum.photos/1200/400?random=6">
-    <img src="https://picsum.photos/1200/400?random=7">
-    <img src="https://picsum.photos/1200/400?random=8">
-    <img src="https://picsum.photos/1200/400?random=9">
   </div>
 </salla-slider>
 </section>
 
 <script>
-   const aaa= document.querySelector('.items');
-   var itemCount = aaa.children.length;
-   const xxx = document.querySelector('.s-slider-block__title-nav');
-var style = document.createElement('style');
- style.innerHTML = `
-    .s-slider-block__title-nav::before {
-      content: ' ${itemCount}'; /* تحديث الـ content ليكون ديناميكي */
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      --tw-translate-y: -50%;
-    --tw-translate-x: -50%;
-      color: black;
-      font-weight: bold;
-      padding: 5px;
-      font-size: 50px;
-    }
-  `;
-   document.head.appendChild(style);
-    console.log(style)
-  </script>
+    const customSlider = document.querySelector('.items');
+    const itemCount = customSlider.children.length;
+    var style = document.createElement('style');
+    style.innerHTML = `
+        .s-slider-block__title-nav::before {
+            content: ' ${itemCount}';
+        }
+      `;
+    document.head.appendChild(style);
+</script>
 <style>
-{# @media (min-width: 768px) {
-    .s-slider-thumbs .s-slider-thumbs-container .swiper-slide {
-        height: 5rem;
-        max-width: 180px;
-    }
-} #}
 salla-slider.enhanced-photos-slider {
     position: relative;
     overflow: hidden;
@@ -101,6 +77,18 @@ salla-slider .s-slider-block__title-nav{
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
+.s-slider-block__title-nav::before { 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    --tw-translate-y: -50%;
+    --tw-translate-x: -50%;
+    color: black;
+    font-weight: bold;
+    padding: 5px;
+    font-size: 50px;
+}
+
 [dir=rtl] .s-slider-v-centered .s-slider-block__title-nav{
   right:0
 }
