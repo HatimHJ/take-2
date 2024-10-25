@@ -70,7 +70,10 @@
         window.header_is_sticky = "{{theme.settings.get('header_is_sticky', 'Default Value')}}"
         window.imageZoom = "{{theme.settings.get('imageZoom')}}"
     </script>
-    
+    <!-- hatim -->
+     {# <script type="text/javascript" src="{{ asset ('my-custom-product-card.js') }}"></script> #}
+     <script type="text/javascript" src="{{ 'my-custom-product-card.js' | asset }}"></script>
+
     {% hook 'head:start' %}
     {% hook head %}
     {% block styles %}{% endblock %}
