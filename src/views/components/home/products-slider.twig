@@ -45,7 +45,8 @@
     <salla-products-slider
             source="selected"
             limit="{{ limit }}"
-            product-card-component="custom-salla-product-card"
+            product-card-component="my-custom-product-card"
+            full-image="false"
             autoplay
             source-value="[{{ products|map((product) => product.id)|join(',') }}]"
             display-all-url="{{display_all_url}}"
