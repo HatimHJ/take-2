@@ -856,6 +856,13 @@
                     "maxLength": 5
                 }
             ]
+        },
+        {
+            "key": "47a75b4f-d91e-4fba-83e1-91f06520dfbc",
+            "title": "تصانيف",
+            "icon": "sicon-store",
+            "path": "home.cate",
+            "fields": []
         }
     ],
     "support_url": null,
