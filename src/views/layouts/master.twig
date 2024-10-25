@@ -86,6 +86,9 @@
             --color-primary-light: {{ theme.color.lighter(0.15) }};
             --color-primary-reverse: {{ theme.color.reverse_text }};
         }
+        body{
+            background-color:#ffffff;
+        }
     </style>
     {# tracking services, custom css feature. #}
     {% hook 'head:end' %}
