@@ -1,5 +1,5 @@
 <!-- Basic Salla Slider component Usage -->
-<section class="s-block s-block--enhanced-photos-slider s-block--full-bg "> 
+<section class="s-block main-custom-sider s-block--enhanced-photos-slider s-block--full-bg "> 
 
 <salla-slider id="thumbs" show-controls="true" type="thumbs" Grid-thumbs="false" 
 show-thumbs-controls="false"
@@ -27,41 +27,41 @@ show-thumbs-controls="false"
 </section>
 
 <script>
-    const customSlider = document.querySelector('.items');
+    const customSlider = document.querySelector('.main-custom-sider .items');
     const itemCount = customSlider.children.length;
     var style = document.createElement('style');
     style.innerHTML = `
-        .s-slider-block__title-nav::before {
+        .main-custom-sider .s-slider-block__title-nav::before {
             content: ' ${itemCount}';
         }
       `;
     document.head.appendChild(style);
 </script>
 <style>
-salla-slider.enhanced-photos-slider {
+.main-custom-sider salla-slider.enhanced-photos-slider {
     position: relative;
     overflow: hidden;
 }
 
-salla-slider .s-slider-block__title-nav{
+.main-custom-sider salla-slider .s-slider-block__title-nav{
       background-color: rgba(255, 255, 255, .8);
 }
-.s-slider-thumbs .s-slider-thumbs-container .swiper-slide {
+.main-custom-sider .s-slider-thumbs .s-slider-thumbs-container .swiper-slide {
   border-radius: 0 !important;
 
  }
- .s-slider-thumbs .s-slider-thumbs-container .swiper-slide.swiper-slide-thumb-active{
+ .main-custom-sider .s-slider-thumbs .s-slider-thumbs-container .swiper-slide.swiper-slide-thumb-active{
   border-radius: 10px  !important;
   border: 1px dotted #333 !important;
   padding: 2px;
   transition: all .3s ease;
 }
- .s-slider-nav-arrow {
+ .main-custom-sider .s-slider-nav-arrow {
   border: 1px dotted #333 !important;
   --tw-shadow-color: 0 !important;
   background: none !important;
 }
-.s-slider-v-centered .s-slider-block__title-nav{
+.main-custom-sider .s-slider-v-centered .s-slider-block__title-nav{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -77,7 +77,7 @@ salla-slider .s-slider-block__title-nav{
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
-.s-slider-block__title-nav::before { 
+.main-custom-sider .s-slider-block__title-nav::before { 
     position: absolute;
     top: 50%;
     left: 50%;
@@ -89,7 +89,7 @@ salla-slider .s-slider-block__title-nav{
     font-size: 50px;
 }
 
-[dir=rtl] .s-slider-v-centered .s-slider-block__title-nav{
+[dir=rtl] .main-custom-sider .s-slider-v-centered .s-slider-block__title-nav{
   right:0
 }
 
