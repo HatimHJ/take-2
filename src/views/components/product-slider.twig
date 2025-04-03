@@ -1,0 +1,59 @@
+<section class="product-slider-section">
+    <div class="container">
+        <h2>{{ section.settings.title }}</h2>
+        <div class="swiper product-slider">
+            <div class="swiper-wrapper">
+                {% for product in section.settings.products %}
+                    <div class="swiper-slide">
+                        {% include 'sections/product-card.twig' with {'product': product} %}
+                    </div>
+                {% endfor %}
+            </div>
+            {% if section.settings.show_pagination %}
+                <div class="swiper-pagination"></div>
+            {% endif %}
+
+            {% if section.settings.show_navigation %}
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+{% if section.settings.enable_autoplay %}
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var swiper = new Swiper('.product-slider', {
+                slidesPerView: {{ section.settings.slides_per_view|default(3) }},
+                spaceBetween: {{ section.settings.space_between|default(20) }},
+                loop: {{ section.settings.loop|default(false) ? 'true' : 'false' }},
+                autoplay: {{ section.settings.enable_autoplay ? '{ delay: ' ~ section.settings.autoplay_speed|default(3000) ~ ', disableOnInteraction: false }' : 'false' }},
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                    enabled: {{ section.settings.show_pagination ? 'true' : 'false' }}
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                    enabled: {{ section.settings.show_navigation ? 'true' : 'false' }}
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                    768: {
+                        slidesPerView: {{ section.settings.slides_per_view|default(3) }},
+                        spaceBetween: {{ section.settings.space_between|default(20) }},
+                    },
+                    1024: {
+                        slidesPerView: {{ section.settings.slides_per_view|default(3) }},
+                        spaceBetween: {{ section.settings.space_between|default(20) }},
+                    },
+                }
+            });
+        });
+    </script>
+{% endif %}
