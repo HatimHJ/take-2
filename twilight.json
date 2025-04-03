@@ -906,6 +906,26 @@
                     "maxLength": 5
                 }
             ]
+        },
+        {
+            "key": "0e0557b4-c168-49d2-8425-dfa5a0bd572a",
+            "title": "section",
+            "icon": "sicon-store",
+            "path": ".",
+            "fields": [
+                {
+                    "id": "show_navigation",
+                    "type": "boolean",
+                    "format": "switch",
+                    "label": "Switch",
+                    "description": "اظهار التنقل",
+                    "labelHTML": null,
+                    "icon": "sicon-toggle-off",
+                    "value": true,
+                    "selected": true,
+                    "required": true
+                }
+            ]
         }
     ],
     "support_url": null,
