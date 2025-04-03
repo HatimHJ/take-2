@@ -912,7 +912,20 @@
             "title": "section",
             "icon": "sicon-store",
             "path": ".",
-            "fields": []
+            "fields": [
+                {
+                    "id": "show_navigation",
+                    "type": "boolean",
+                    "format": "switch",
+                    "label": "Switch",
+                    "description": "اظهار التنقل",
+                    "labelHTML": null,
+                    "icon": "sicon-toggle-off",
+                    "value": true,
+                    "selected": true,
+                    "required": true
+                }
+            ]
         }
     ],
     "support_url": null,
